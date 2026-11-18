@@ -1,33 +1,38 @@
 # herdr-app-theme-catppuccin-mocha
 
-[Catppuccin Mocha](https://github.com/catppuccin/catppuccin) theme for the [Herdr](https://herdr.dev) desktop app. Colours terminals, sidebar, bars, panels and accents.
+A [Herdr](https://herdr.dev) desktop app theme that applies the **Catppuccin Mocha**
+palette to terminals, sidebar, bars, panels, and accents.
 
-Not affiliated with Catppuccin or Herdr.
+Catppuccin is made by the [Catppuccin](https://github.com/catppuccin/catppuccin)
+community. This theme adapts its Mocha palette for the Herdr app and is not
+affiliated with Catppuccin or Herdr.
 
 ## Install
 
-Copy the theme into the Herdr app home:
+Requires the Herdr desktop app (tested on 0.1.16).
 
 ```sh
 curl -fsSL -o ~/.config/herdr-app/themes/catppuccin-mocha.json \
   https://raw.githubusercontent.com/s3rgiosan/herdr-app-theme-catppuccin-mocha/main/themes/catppuccin-mocha.json
-```
-
-Herdr uses `HERDR_APP_HOME` instead of `~/.config/herdr-app` when set.
-
-Then pick `catppuccin-mocha` in Settings → Look, or run:
-
-```sh
 herdr-app do app.theme '{"name":"catppuccin-mocha"}'
 ```
 
-Mocha is a dark theme, so Herdr sets it as the dark-mode theme. It shows when macOS is in dark mode, or always with `"appearance": "dark"` in `~/.config/herdr-app/settings.json`.
+Herdr reads themes from `~/.config/herdr-app/themes/`, or from `themes/` under
+`HERDR_APP_HOME` when that is set. The theme also shows in Settings → Look.
 
-## Colours
+## Appearance
 
-Terminal colours match Ghostty's bundled `Catppuccin Mocha` theme. Selection uses Surface 2 (`#585b70`) so selected text stays readable.
+Mocha is a dark theme, so Herdr sets it as the dark-mode theme of the current
+layout and keeps your light-mode theme. Each layout keeps its own light and dark
+theme. It shows when Settings → Look → Appearance is Dark, or System with macOS
+in dark mode.
 
-| Herdr colour | Catppuccin | Hex |
+## Colors
+
+Terminal colors match Ghostty's bundled `Catppuccin Mocha` theme. Selection uses
+Surface 2 so selected text stays readable.
+
+| Herdr color | Catppuccin | Hex |
 |---|---|---|
 | `background` | Base | `#1e1e2e` |
 | `foreground` | Text | `#cdd6f4` |
@@ -42,7 +47,7 @@ Terminal colours match Ghostty's bundled `Catppuccin Mocha` theme. Selection use
 | `muted` | Subtext 0 | `#a6adc8` |
 | `dim` | Overlay 1 | `#7f849c` |
 
-Herdr derives the other panel colours from these.
+Herdr derives the other panel colors from these.
 
 ## Uninstall
 
@@ -52,6 +57,11 @@ rm ~/.config/herdr-app/themes/catppuccin-mocha.json
 
 Then pick another dark theme in Settings → Look.
 
+## Scope
+
+The theme is for the Herdr desktop app only. The herdr terminal UI has built-in
+Catppuccin themes, set with `theme.name` in its `config.toml`.
+
 ## License
 
-MIT. Catppuccin palette © 2021 Catppuccin, MIT.
+MIT. See [LICENSE](LICENSE). The Catppuccin palette is © 2021 Catppuccin, MIT.
